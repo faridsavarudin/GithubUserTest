@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spaces_default_margin"
+                app:cardBackgroundColor="@color/grey"
+                android:layout_marginTop="@dimen/spaces_double"
+                android:layout_marginBottom="@dimen/spaces_default"
+                app:cardCornerRadius="8dp">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/sb_users"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/CustomSearchView"
+                    app:defaultQueryHint="@string/search_user" />
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spaces_default_margin"
+                    app:cardCornerRadius="13dp"
+                    android:layout_marginBottom="@dimen/spaces_default"
+                    app:cardElevation="3dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/spaces_normal"
+                        android:visibility="visible"
+                        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_user" />
+
+                </androidx.cardview.widget.CardView>
+
+                <include
+                    android:id="@+id/inc_not_found"
+                    layout="@layout/partial_not_found"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/inc_error"
+                    layout="@layout/partial_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/inc_loading"
+                    layout="@layout/partial_loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

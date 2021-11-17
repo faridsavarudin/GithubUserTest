@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".detail.DetailUserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/lin_header"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_item_photo_detail"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@android:color/darker_gray"
+                app:civ_border_color="#FF909090"
+                app:civ_border_width="1dp"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spaces_default"
+                android:layout_marginTop="@dimen/spaces_default"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_black_content"
+                    android:textSize="@dimen/text_headline"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spaces_half"
+                    android:textColor="@color/color_black_content"
+                    android:textSize="@dimen/text_content" />
+
+                <TextView
+                    android:id="@+id/tv_role_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spaces_default"
+                    android:text="@string/sample_username"
+                    android:textColor="@color/color_black_content"
+                    android:textSize="@dimen/text_content"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spaces_double"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/followers"
+                        android:src="@drawable/ic_resource_default" />
+
+                    <TextView
+                        android:id="@+id/tv_followers_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/spaces_normal"
+                        android:text="0"
+                        android:textColor="@color/color_black_content"
+                        android:textSize="@dimen/text_content"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/spaces_half"
+                        android:text="@string/followers"
+                        android:textColor="@color/color_black_content"
+                        android:textSize="@dimen/text_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="@dimen/spaces_normal"
+                        android:text="."
+                        android:textColor="@color/color_black_content"
+                        android:textSize="@dimen/text_content"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_following_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="0"
+                        android:textColor="@color/color_black_content"
+                        android:textSize="@dimen/text_content"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/spaces_half"
+                        android:text="@string/following"
+                        android:textColor="@color/color_black_content"
+                        android:textSize="@dimen/text_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spaces_default_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/location"
+                        android:src="@drawable/ic_location" />
+
+                    <TextView
+                        android:id="@+id/tv_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/spaces_half"
+                        android:text="@string/sample_city"
+                        android:textColor="@color/color_black_content"
+                        android:textSize="@dimen/text_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spaces_default_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/email"
+                        android:src="@drawable/ic_email" />
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/spaces_half"
+                        android:text="@string/sample_email"
+                        android:textColor="@color/color_black_content"
+                        android:textSize="@dimen/text_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lin_header">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_repos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spaces_default_margin"
+                android:visibility="visible"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_user_repo" />
+
+                <ProgressBar
+                    android:id="@+id/progressbar_repos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:progressTint="@color/color_black_content" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="@dimen/spaces_normal"
+            android:text="@string/try_again"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:progressTint="@color/color_black_content" />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

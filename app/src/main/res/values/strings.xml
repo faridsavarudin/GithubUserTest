@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TixAndroidTest</string>
+    <string name="sample_username">Whang Shi Eun</string>
+    <string name="sample_city">Taipei, Taiwan</string>
+    <string name="sample_email">test@mailinator.com</string>
+    <string name="search_user">Search user...</string>
+    <string name="try_again">Try again</string>
+    <string name="not_found">Not found</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="updated_15_hours_ago">Updated 15 hours ago</string>
+    <string name="_55">55</string>
+    <string name="iv_start">iv_start</string>
+    <string name="email">email</string>
+    <string name="location">location</string>
+
+    <string name="seconds_ago">seconds ago</string>
+    <string name="minutes_ago">minutes ago</string>
+    <string name="hours_ago">hours ago</string>
+    <string name="days_ago">days ago</string>
+    <string name="weeks_ago">weeks ago</string>
+    <string name="months_ago">months ago</string>
+    <string name="years_ago">years ago</string>
+</resources>
