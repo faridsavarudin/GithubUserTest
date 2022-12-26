@@ -1,5 +1,5 @@
-# Tix Android Test
-This app for Test in Tix as Android Engineer
+# Github User
+This app for Test 
 
 ## Description
 This app is the result of my assessment in Tix, implements MVVM(Model View ViewModel) architecture using the components ViewModel, LiveData, Koin, Retrofit, OkHttp,
