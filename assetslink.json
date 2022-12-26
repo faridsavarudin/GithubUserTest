@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "co.astrnt.androidqa",
+    "sha256_cert_fingerprints":
+    ["3D:5D:5D:91:5E:AF:F8:F4:FA:D4:ED:45:7A:7E:87:01:E5:39:F2:A8:AB:7F:5B:9E:1C:96:2C:E8:E5:27:E7:32"]
+  }
+}]
